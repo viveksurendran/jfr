@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+    <div class="col-lg-3">
+        <%=image_tag("http://placehold.it/250x250", alt: "Example Image")%>
+    </div>
+    <div class="col-lg-9">
+        <p><h3>Vivek</h3>
+
+    </div>
+</div>
+
+<h1>Jobs Posted</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Location</th>
+      <th>Posted on</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.job_title %></td>
+        <td><%= job.job_location %></td>
+        <td>Text</td>
+        <td><%= link_to 'Show', job %></td>
+        <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job', new_job_path, class: "btn btn-default"  %>

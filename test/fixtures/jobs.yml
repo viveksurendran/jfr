@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_title: MyString
+  job_location: MyString
+  job_category: MyString
+  job_industry: MyString
+  job_funcarea: MyString
+  job_salmin: 1
+  job_salmax: 1
+  job_yrsofexpmin: MyString
+  job_yrsofexpmax: MyString
+  job_coursetype: MyString
+  job_gradeyrmin: MyString
+  job_gradeyrmax: MyString
+  job_jobdesc: MyText
+
+two:
+  job_title: MyString
+  job_location: MyString
+  job_category: MyString
+  job_industry: MyString
+  job_funcarea: MyString
+  job_salmin: 1
+  job_salmax: 1
+  job_yrsofexpmin: MyString
+  job_yrsofexpmax: MyString
+  job_coursetype: MyString
+  job_gradeyrmin: MyString
+  job_gradeyrmax: MyString
+  job_jobdesc: MyText

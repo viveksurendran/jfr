@@ -1,0 +1,83 @@
+<%= form_for(job) do |f| %>
+  <% if job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row">
+    <div class="col-lg-4">
+
+  <div class="field">
+    <label class="control-label">Title:</label>
+    <%= f.text_field :job_title, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label class="control-label">Location:</label>
+    <%= f.text_field :job_location, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label class="control-label">Category:</label>
+    <%= f.text_field :job_category, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label class="control-label">Industry:</label>
+    <%= f.text_field :job_industry, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label class="control-label">Functional Area:</label>
+    <%= f.text_field :job_funcarea, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label class="control-label">Salary</label>
+    <%= f.number_field :job_salmin, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.number_field :job_salmax, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label class="control-label">Experience (in yrs)</label>
+    <%= f.text_field :job_yrsofexpmin, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :job_yrsofexpmax, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label class="control-label">Job Type</label>
+    <%= f.text_field :job_coursetype, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label class="control-label">Graduating Year</label>
+    <%= f.text_field :job_gradeyrmin, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :job_gradeyrmax, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label class="control-label">Job Description</label>
+    <%= f.text_area :job_jobdesc, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Post", class: "btn btn-primary" %>
+  </div>
+<% end %>
+</div>
+</div>
