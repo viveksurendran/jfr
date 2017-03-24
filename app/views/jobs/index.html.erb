@@ -25,12 +25,11 @@
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
-        <td><%= job.job_title %></td>
+        <td><%= link_to job.job_title, job %></td>
         <td><%= job.job_location %></td>
-        <td>Text</td>
-        <td><%= link_to 'Show', job %></td>
+        <td><%= job.created_at.strftime("%d-%m-%Y") %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

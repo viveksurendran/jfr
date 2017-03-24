@@ -25,7 +25,6 @@ group :production do
     gem 'pg'
 end
 gem 'therubyracer'
-gem 'jquery-validation-rails'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'

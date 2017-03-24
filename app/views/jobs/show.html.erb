@@ -1,14 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Job title:</strong>
-  <%= @job.job_title %>
-</p>
+<div class="row">
+    <div class="col-lg-6">
+        
+    
+    </div>
+    
+    <div class="col-lg-6">
+        <div class="row">
+            <h4><%= @job.job_title %></h4>
+            <div class="col-lg-6">
+                Location: <%= @job.job_location %>
+            </div>
+            <div class="col-lg-6">
+                Experience: <%= @job.job_yrsofexpmin %> to <%= @job.job_yrsofexpmax %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                Salary: <%= @job.job_salmin %> to <%= @job.job_salmax %>
+            </div>
 
-<p>
-  <strong>Job location:</strong>
-  <%= @job.job_location %>
-</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                Description: <%= @job.job_jobdesc %>
+            </div>
+            <div class="col-lg-6">
+            </div>
+        </div>
+    </div>
+</div>
+   
+
+
+  
+<!--
 
 <p>
   <strong>Job category:</strong>
@@ -25,25 +52,6 @@
   <%= @job.job_funcarea %>
 </p>
 
-<p>
-  <strong>Job salmin:</strong>
-  <%= @job.job_salmin %>
-</p>
-
-<p>
-  <strong>Job salmax:</strong>
-  <%= @job.job_salmax %>
-</p>
-
-<p>
-  <strong>Job yrsofexpmin:</strong>
-  <%= @job.job_yrsofexpmin %>
-</p>
-
-<p>
-  <strong>Job yrsofexpmax:</strong>
-  <%= @job.job_yrsofexpmax %>
-</p>
 
 <p>
   <strong>Job coursetype:</strong>
@@ -59,11 +67,8 @@
   <strong>Job gradeyrmax:</strong>
   <%= @job.job_gradeyrmax %>
 </p>
+-->
 
-<p>
-  <strong>Job jobdesc:</strong>
-  <%= @job.job_jobdesc %>
-</p>
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
 <%= link_to 'Back', jobs_path %>
