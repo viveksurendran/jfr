@@ -24,6 +24,7 @@ end
 group :production do
     gem 'pg'
 end
+gem 'carrierwave', '~> 1.0'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
